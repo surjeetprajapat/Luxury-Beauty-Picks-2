@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Beauty Picks</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script>
+      // Only load Google Analytics outside of the preview iframe to prevent interceptor conflicts
+      if (window.self === window.top) {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1E8G5YQP86';
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1E8G5YQP86');
+      } else {
+        console.log('Google Analytics disabled in preview environment.');
+        // Provide a dummy gtag function for the preview environment just in case
+        window.gtag = function() {};
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
